@@ -1,2 +1,10 @@
-# Basic-calculator-app
-A simple web-based calculator app built using HTML, CSS, and JavaScript.
+# Calculator Project
+
+A simple calculator built using HTML, CSS, and JavaScript.
+
+## Features
+- Basic arithmetic operations
+- Responsive UI
+
+## Live Demo
+https://basic-calculator-akash.netlify.app
