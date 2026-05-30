@@ -1,0 +1,104 @@
+<!DOCTYPE.html>
+<html>
+  <head>
+    <style>
+    body {
+      height:130vh;
+      background-color: black;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    input {
+      height:60px;
+      width:100%;
+      background-color:black;
+      color:white;
+      border:black;
+      margin-bottom:100px;
+      font-size:60px;
+      text-align:right;
+      box-sizing:border-box;
+      overflow-x:auto;
+      white-space:nowrap;
+    }
+    .calculator{
+      background:black;
+      padding:20px;
+      width:300px;
+      border-radius:10px;
+    }
+      .buttons {
+       display:grid;
+       grid-template-columns:repeat(4,1fr);
+       gap:10px;
+      }
+      button {
+        height:70px;
+        width:70px;
+        border-radius:40px;
+        font-size:30px;
+        background-color:black;
+        border:none;
+        box-shadow:0 0 10px black;
+        background:linear-gradient(to bottom,#444,#222);
+        color:white;
+        transition:0.2s;
+        -webkit-tap-highlight-color:transparent;
+        transition:0.3s;
+      }
+    .calculator:has(button:active){
+     box-shadow:0 0 40px #ff8008;
+    }
+      .operator{
+       background:linear-gradient(to bottom,#ffb347,#ff8008);
+       box-shadow:0 0 15px #ff8008;
+         }
+         .calculate{
+           background:linear-gradient(to bottom,#4facfe,#0052d4);
+           box-shadow:0 0 15px #0052d4;
+         }
+         button:active{
+         transform:scale(0.95);
+         box-shadow:0 0 15px red;
+         transition:0.2s;
+           }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+    <input type="text"id="akash"readonly>
+    
+    <div class="buttons">
+      <button onclick="show(1)">1</button>
+      <button onclick="show(2)">2</button>
+      <button onclick="show(3)">3</button>
+      <button class="operator"onclick="show('+')">+</button>
+      <button onclick="show(4)">4</button>
+      <button onclick="show(5)">5</button>
+      <button onclick="show(6)">6</button>
+      <button class="operator"onclick="show('-')">-</button>
+      <button onclick="show(7)">7</button>
+      <button onclick="show(8)">8</button>
+      <button onclick="show(9)">9</button>
+      <button class="operator"onclick="clearDisplay()">ac</button>
+      <button class="operator"onclick="show('*')">×</button>
+      <button onclick="show(0)">0</button>
+      <button class="operator" onclick="show('/')">÷</button>
+      <button class="calculate" onclick="calculate()">=</button>
+      </div>
+      </div>
+      <script>
+          function show(value){
+            document.getElementById("akash").value+=value;
+            akash.scrollLeft = akash.scrollWidth;
+          }
+          function clearDisplay(){
+            akash.value="";
+          }
+          function calculate(){
+            akash.value=eval(akash.value);
+          }
+      </script>
+  </body>
+</html>
